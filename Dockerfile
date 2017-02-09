@@ -3,7 +3,7 @@ FROM alpine:latest
 MAINTAINER Robert Gogolok <gogolok@gmail.com>
 
 # Install dependencies
-ENV GOPATH=/usr/local/bin
+ENV GOPATH=/usr/local/bin/go
 
 # Install CF CLI and plugins
 RUN apk add --update curl && \
