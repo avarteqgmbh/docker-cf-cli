@@ -6,7 +6,7 @@ MAINTAINER Robert Gogolok <gogolok@gmail.com>
 ENV GOPATH=/usr/local/bin/go
 
 # Install CF CLI and plugins
-RUN apk add --update curl && \
+RUN apk add --update curl make && \
     curl -L 'https://github.com/geofffranks/spruce/releases/download/v1.8.9/spruce-linux-amd64' --output /usr/local/bin/spruce && chmod +x /usr/local/bin/spruce && \
     curl -L 'https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.23.1' | tar -zx -C /usr/local/bin
 RUN apk add --update --quiet --no-cache --virtual build-dependencies build-base git go && \
